@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: rhtap-demo-component-prje
+spec:
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - env:
+        - name: var_name
+          value: test
+        image: quay.io/redhat-appstudio-qe/rhtap-demo-dev-twjw-tenant/mvp-test-app/rhtap-demo-component-prje@sha256:9b5b31cce5a4c2447eca9ea72b47d501e33cd5eb013860f872a862365c5f5fe8
+        name: hacbs-jvm-build-test-project
+        resources: {}
+status: {}
